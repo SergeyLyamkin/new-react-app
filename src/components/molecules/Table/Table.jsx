@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Button from "src/components/atoms/Button/Button";
+import useModal from "src/lib/hooks/states/toggleModal";
+
 import { useNavigate } from "react-router-dom";
+import Modal from "src/components/atoms/Modal/Modal";
 
 const StyledTableItem = styled.td`
   padding: 8px;
@@ -40,6 +43,8 @@ const TableHeader = () => {
 
 const TableButtons = () => {
   const navigate = useNavigate();
+  const [isShowingModal, toggleModal]= useModal();
+
   return (
     <>
       <TableItem>
@@ -49,35 +54,38 @@ const TableButtons = () => {
         <Button label="Edit" color="#ffa500" />
       </TableItem>
       <TableItem>
-        <Button label="Destroy" color="#cc0000" />
+        <Button label="Destroy" color="#cc0000" onClick={toggleModal} />
       </TableItem>
+      <Modal show={isShowingModal} onCloseButtonClick={toggleModal} />
     </>
   );
 }
 
 const Table = () => {
   return (
-    <StyledTable>
-      <TableHeader />
-      <tr>
-        <TableItem>My first project</TableItem>
-        <TableItem>It&apos;s only for testing</TableItem>
-        <TableItem>About 1 month ago</TableItem>
-        <TableButtons />
-      </tr>
-      <tr>
-        <TableItem>My first project</TableItem>
-        <TableItem>It&apos;s only for testing</TableItem>
-        <TableItem>About 1 month ago</TableItem>
-        <TableButtons />
-      </tr>
-      <tr>
-        <TableItem>My first project</TableItem>
-        <TableItem>It&apos;s only for testing</TableItem>
-        <TableItem>About 1 month ago</TableItem>
-        <TableButtons />
-      </tr>
-    </StyledTable>
+    <>
+      <StyledTable>
+        <TableHeader />
+        <tr>
+          <TableItem>My first project</TableItem>
+          <TableItem>It&apos;s only for testing</TableItem>
+          <TableItem>About 1 month ago</TableItem>
+          <TableButtons />
+        </tr>
+        <tr>
+          <TableItem>My first project</TableItem>
+          <TableItem>It&apos;s only for testing</TableItem>
+          <TableItem>About 1 month ago</TableItem>
+          <TableButtons />
+        </tr>
+        <tr>
+          <TableItem>My first project</TableItem>
+          <TableItem>It&apos;s only for testing</TableItem>
+          <TableItem>About 1 month ago</TableItem>
+          <TableButtons />
+        </tr>
+      </StyledTable>
+    </>
   );
 };
 
