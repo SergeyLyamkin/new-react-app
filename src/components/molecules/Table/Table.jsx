@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "src/components/atoms/Button/Button";
-import useModal from "src/lib/hooks/states/toggleModal";
+import useModal from "src/lib/hooks/toggleModal";
 
 import { useNavigate } from "react-router-dom";
 import Modal from "src/components/atoms/Modal/Modal";

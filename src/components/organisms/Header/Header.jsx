@@ -28,7 +28,6 @@ const Header = () => {
       <Link to="/">React App</Link>
       <StyledNav>
         <Link to="/projects">Projects</Link>
-        <Link to="/tasks">Tasks</Link>
       </StyledNav>
       <Button label="Go Back" color="#ed760e" onClick={() => navigate(-1)} />
     </StyledHeader>

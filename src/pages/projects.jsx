@@ -1,9 +1,13 @@
-import ProjectsTemplate from "src/components/templates/ProjectsTemplate/ProjectsTemplate";
+import MainContent from "src/components/templates/MainContent/MainContent";
+import Table from "src/components/molecules/Table/Table";
+
 
 const ProjectsTemplatePage = () => {
   return (
     <>
-      <ProjectsTemplate />
+      <MainContent>
+        <Table />
+      </MainContent>
     </>
   );
 };

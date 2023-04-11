@@ -8,6 +8,8 @@ const StyledCard = styled.div`
   border-radius: 30px;
   text-align: center;
   box-shadow: 0px 0px 20px 12px rgba(0, 0, 255, .2);
+  font-size: 1.5em;
+  line-height: 1.75em;;
 `;
 
 const StyledCardHeader = styled.div`
@@ -16,20 +18,9 @@ const StyledCardHeader = styled.div`
   line-height: 1.25em;
 `;
 
-const StyledCardItem = styled.li`
-  font-size: 1.5em;
-  line-height: 1.75em;
-`;
-
 const CardHeader = ({ children }) => {
   return (
     <StyledCardHeader>{children}</StyledCardHeader>
-  );
-}
-
-const CardItem = ({ children }) => {
-  return (
-    <StyledCardItem>{children}</StyledCardItem>
   );
 }
 
@@ -38,9 +29,9 @@ const Card = () => {
     <StyledCard>
       <CardHeader>Sergey Lyamkin</CardHeader>
       <ol>
-        <CardItem>Часто болею</CardItem>
-        <CardItem>Закрыл 3 семестр без допсессий</CardItem>
-        <CardItem>3400 часов в Dota 2)))</CardItem>
+        <li>Часто болею</li>
+        <li>Закрыл 3 семестр без допсессий</li>
+        <li>3400 часов в Dota 2)))</li>
       </ol>
     </StyledCard>
   );

@@ -1,9 +1,15 @@
-import TasksTemplate from "src/components/templates/TasksTemplate/TasksTemplate"
+import MainContent from "src/components/templates/MainContent/MainContent";
+
+import { useParams } from "react-router-dom";
 
 const TasksTemplatePage = () => {
+  const { id } = useParams();
+
   return (
     <>
-      <TasksTemplate />
+      <MainContent>
+        {id}
+      </MainContent> 
     </>
   );
 };

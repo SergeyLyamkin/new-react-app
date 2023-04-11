@@ -1,9 +1,12 @@
-import DefaultProjectsTemplate from "src/components/templates/DefaultTemplate/DefaultTemplate";
+import MainContent from "src/components/templates/MainContent/MainContent";
+import Card from "src/components/molecules/Card/Card";
 
 const IndexTemplatePage = () => {
   return (
     <>
-      <DefaultProjectsTemplate />
+      <MainContent>
+        <Card />
+      </MainContent>
     </>
   );
 };
