@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
 
-const StyledModalWrapper = styled.div`
+const ModalWrapper = styled.div`
   display: flex;
   position: absolute;
   justify-content: center;
@@ -28,15 +28,15 @@ const StyledModal = styled.div`
 `
 
 const StyledModalBody = styled.div`
+  font-size: 1.25em;
   padding: 20px;
 `
 
 const StyledModalFooter = styled.div`
   width: 100%;
-  height: 60px;
+  height: 56px;
   display: flex;
   flex-direction: row-reverse;
-  padding: 10px 0;
   position: absolute;
   bottom: 0;
   background-color: rgb(243, 244, 246);
@@ -48,16 +48,16 @@ const Modal = ({ show, onCloseButtonClick }) => {
   }
   
   return (
-    <StyledModalWrapper>
+    <ModalWrapper>
       <StyledModal>
         <StyledModalBody>
           Click on the close button to close the modal.
         </StyledModalBody>
         <StyledModalFooter>
-          <Button onClick={onCloseButtonClick} label="Close Modal"></Button>
+          <Button onClick={onCloseButtonClick} label="Close Modal" color="#ff726f"></Button>
         </StyledModalFooter>
       </StyledModal>
-    </StyledModalWrapper>
+    </ModalWrapper>
   );
   };
   

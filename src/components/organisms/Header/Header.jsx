@@ -29,7 +29,7 @@ const Header = () => {
       <StyledNav>
         <Link to="/projects">Projects</Link>
       </StyledNav>
-      <Button label="Go Back" color="#ed760e" onClick={() => navigate(-1)} />
+      <Button label="Go Back" color="#72bcd4" onClick={() => navigate(-1)} />
     </StyledHeader>
   );
 };

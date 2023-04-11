@@ -28,6 +28,7 @@ const MainContent = ({ children }) => {
     return () => document.removeEventListener("scroll", onScroll);
   }, []);
 
+
   return (
     <>
 			{showScrollButton && (

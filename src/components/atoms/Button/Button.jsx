@@ -13,6 +13,7 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({ color="#000000", label = "Text", onClick = () => {}, disabled }) => {
+  console.log();
   return (
     <StyledButton color={color} onClick={onClick} disabled={disabled}>
       {label}

@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: #2986cc;
+
+    &:hover {
+      filter: brightness(75%);
+      transition-duration: 500ms;
+    }
   }
 
   table {
@@ -21,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+
+    &:hover {
+      filter: brightness(85%);
+      transition-duration: 500ms;
+    }
   }
 `;
 
