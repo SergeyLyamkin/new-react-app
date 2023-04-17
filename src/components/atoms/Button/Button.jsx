@@ -8,12 +8,11 @@ const StyledButton = styled.button`
   margin: 8px;
   border: 1px solid #000000;
   border-radius: 4px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   font-size: 0.7em;
 `;
 
-const Button = ({ color="#000000", label = "Text", onClick = () => {}, disabled }) => {
-  console.log();
+const Button = ({ color = "#000000", label = "Text", onClick = () => {}, disabled }) => {
   return (
     <StyledButton color={color} onClick={onClick} disabled={disabled}>
       {label}
