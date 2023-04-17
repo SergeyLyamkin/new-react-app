@@ -17,6 +17,6 @@ const ScrollToTopButton = () => {
       <Button color="#2b82d9" label="Scroll to top" onClick={onClick} />
     </StyledButton>
   );
-}
+};
 
 export default ScrollToTopButton;
