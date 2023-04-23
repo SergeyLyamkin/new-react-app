@@ -2,12 +2,18 @@
   "name": "new-react-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@apollo/client": "^3.7.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "babel-eslint": "^10.1.0",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "reset-css": "^5.0.1",
     "styled-components": "^5.3.9",
@@ -18,8 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './**/*.{js,jsx}' --fix",
-    "prepare": "husky install"
+    "lint": "eslint './**/*.{js,jsx}' --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +56,10 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
   }
 }
