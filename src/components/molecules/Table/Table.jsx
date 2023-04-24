@@ -43,14 +43,14 @@ const TableHeader = () => {
   );
 };
 
-const TableButtons = () => {
+const TableButtons = ({ id }) => {
   const navigate = useNavigate();
   const [isShowingModal, toggleModal] = useModal();
 
   return (
     <>
       <TableItem>
-        <Button label="Tasks" color="#7aa952" onClick={() => navigate("1")} />
+        <Button label="Tasks" color="#7aa952" onClick={() => navigate(id)} />
       </TableItem>
       <TableItem>
         <Button label="Edit" color="#ffa500" />
@@ -73,10 +73,10 @@ const Table = () => {
         {projects.map((project) => {
           return (
             <tr key={project.id}>
-              <TableItem key={project.name}>{project.name}</TableItem>
-              <TableItem key={project.description}>{project.description}</TableItem>
-              <TableItem key={project.createdAt}>{project.createdAt}</TableItem>
-              <TableButtons />
+              <TableItem>{project.name}</TableItem>
+              <TableItem>{project.description}</TableItem>
+              <TableItem>{project.createdAt}</TableItem>
+              <TableButtons id={project.id} />
             </tr>
           );
         })}
