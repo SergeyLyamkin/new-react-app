@@ -3,11 +3,9 @@ import Card from "src/components/molecules/Card/Card";
 
 const IndexTemplatePage = () => {
   return (
-    <>
-      <MainContent>
-        <Card />
-      </MainContent>
-    </>
+    <MainContent>
+      <Card />
+    </MainContent>
   );
 };
 

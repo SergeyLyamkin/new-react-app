@@ -10,7 +10,7 @@ const StyledMainContent = styled.main`
 `;
 
 const MainContent = ({ children }) => {
-	const [showScrollButton, setShowScrollButton] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   const onScroll = () => {
     if (window.scrollY > 0) {
@@ -28,16 +28,11 @@ const MainContent = ({ children }) => {
     return () => document.removeEventListener("scroll", onScroll);
   }, []);
 
-
   return (
     <>
-			{showScrollButton && (
-        <ScrollToTopButton />
-      )}
+      {showScrollButton && <ScrollToTopButton />}
       <Header />
-      <StyledMainContent>
-        {children}
-      </StyledMainContent>
+      <StyledMainContent>{children}</StyledMainContent>
       <Footer />
     </>
   );

@@ -7,9 +7,9 @@ const StyledCard = styled.div`
   border: 3px solid black;
   border-radius: 30px;
   text-align: center;
-  box-shadow: 0px 0px 20px 12px rgba(0, 0, 255, .2);
+  box-shadow: 0px 0px 20px 12px rgba(0, 0, 255, 0.2);
   font-size: 1.5em;
-  line-height: 1.75em;;
+  line-height: 1.75em;
 `;
 
 const StyledCardHeader = styled.div`
@@ -19,10 +19,8 @@ const StyledCardHeader = styled.div`
 `;
 
 const CardHeader = ({ children }) => {
-  return (
-    <StyledCardHeader>{children}</StyledCardHeader>
-  );
-}
+  return <StyledCardHeader>{children}</StyledCardHeader>;
+};
 
 const Card = () => {
   return (

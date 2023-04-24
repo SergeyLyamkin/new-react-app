@@ -4,6 +4,7 @@ import Modal from "src/components/atoms/Modal/Modal";
 import useModal from "src/lib/hooks/toggleModal";
 
 import { useNavigate } from "react-router-dom";
+import { useProjects } from "src/lib/hooks/states/project";
 
 const StyledTableItem = styled.td`
   padding: 8px;
@@ -63,28 +64,22 @@ const TableButtons = () => {
 };
 
 const Table = () => {
+  const { projects } = useProjects();
+
   return (
     <StyledTable>
       <TableHeader />
       <tbody>
-        <tr>
-          <TableItem>My first project</TableItem>
-          <TableItem>It&apos;s only for testing</TableItem>
-          <TableItem>About 1 month ago</TableItem>
-          <TableButtons />
-        </tr>
-        <tr>
-          <TableItem>My first project</TableItem>
-          <TableItem>It&apos;s only for testing</TableItem>
-          <TableItem>About 1 month ago</TableItem>
-          <TableButtons />
-        </tr>
-        <tr>
-          <TableItem>My first project</TableItem>
-          <TableItem>It&apos;s only for testing</TableItem>
-          <TableItem>About 1 month ago</TableItem>
-          <TableButtons />
-        </tr>
+        {projects.map((project) => {
+          return (
+            <tr key={project.id}>
+              <TableItem key={project.name}>{project.name}</TableItem>
+              <TableItem key={project.description}>{project.description}</TableItem>
+              <TableItem key={project.createdAt}>{project.createdAt}</TableItem>
+              <TableButtons />
+            </tr>
+          );
+        })}
       </tbody>
     </StyledTable>
   );

@@ -3,7 +3,7 @@ import { ApolloProvider } from "@apollo/client/react";
 
 import apolloClient from "src/lib/apolloClient";
 
-import GlobalStyles from 'src/globalStyles';
+import GlobalStyles from "src/globalStyles";
 import HomePage from "src/pages/index";
 import ProjectsPage from "src/pages/projects";
 import TasksPage from "src/pages/tasks";

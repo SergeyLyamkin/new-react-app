@@ -1,6 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
 import Button from "src/components/atoms/Button/Button";
 import styled from "styled-components";
+
+import { Link, useNavigate } from "react-router-dom";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -18,7 +19,7 @@ const StyledHeader = styled.header`
 const StyledNav = styled.div`
   display: flex;
   gap: 32px;
-`
+`;
 
 const Header = () => {
   const navigate = useNavigate();
