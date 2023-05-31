@@ -7,6 +7,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   font-size: 2em;
+  background: #90c7ff;
 `;
 
 const Footer = () => {

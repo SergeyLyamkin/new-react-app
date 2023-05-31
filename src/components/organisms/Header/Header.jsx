@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
   align-items: center;
   font-size: 2em;
   font-weight: 700;
+  background: #90c7ff;
 `;
 
 const StyledNav = styled.div`

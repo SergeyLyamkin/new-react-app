@@ -5,7 +5,7 @@ export default gql`
     createdAt
     description
     id
-    name
-    updatedAt
+    title
+    deadlineAt
   }
 `;
